@@ -627,6 +627,26 @@ class Client extends Base
     }
 
     /**
+     * Fare_MasterPricerTravelBoardSearch
+     *
+     * @param RequestOptions\FareMasterPricerTbSearch $options
+     * @param array $messageOptions (OPTIONAL)
+     * @return Result
+     * @throws Client\InvalidMessageException
+     * @throws Client\RequestCreator\MessageVersionUnsupportedException
+     * @throws Exception
+     */
+    public function fareInstantTravelBoardSearch(
+        RequestOptions\FareMasterPricerTbSearch $options,
+        $messageOptions = []
+    ) {
+        $msgName = 'Fare_InstantTravelBoardSearch';
+
+        return $this->callMessage($msgName, $options, $messageOptions);
+    }
+
+
+    /**
      * Fare_MasterPricerCalendar
      *
      * @param RequestOptions\FareMasterPricerCalendarOptions $options

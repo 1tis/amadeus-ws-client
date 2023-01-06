@@ -44,6 +44,15 @@ class MPLocation extends LoadParamsFromArray
     public $airport;
 
     /**
+     * Airport used without locator code
+     *
+     * Use ATA/IATA defined 3 letter city code
+     *
+     * @var string
+     */
+    public $airportWithoutLocator;
+
+    /**
      * City code
      *
      * Use ATA/IATA defined 3 letter city code

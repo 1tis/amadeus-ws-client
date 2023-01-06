@@ -86,6 +86,8 @@ class LocationDetails
         if (!empty($location->airport)) {
             $this->locationId = $location->airport;
             $this->airportCityQualifier = "A";
+        } elseif (!empty($location->airportWithoutLocator)) {
+            $this->locationId = $location->airportWithoutLocator;
         } elseif (!empty($location->city)) {
             $this->locationId = $location->city;
             $this->airportCityQualifier = "C";
